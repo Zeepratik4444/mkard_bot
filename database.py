@@ -24,7 +24,7 @@ def connect_to_rds():
 
 def check_user(phone: str) -> str:
     cursor,conn=connect_to_rds()
-    cursor.execute("SELECT name,phone,email,address_line_1,address_line_2,city,state,zipcode FROM users WHERE phone = ?", (phone,))
+    cursor.execute("SELECT name,phone,email,address_line_1,address_line_2,city,state,zipcode FROM user WHERE phone = ?", (phone,))
     row = cursor.fetchone()
     conn.close()
     if row:
