@@ -1,0 +1,11 @@
+langchain
+pandas
+langchain_groq
+langchain_community
+langchain_core
+flask
+python-dotenv
+numpy
+langgraph
+mysql-connector-python
+typing-extensions
