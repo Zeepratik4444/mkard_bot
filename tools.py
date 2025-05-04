@@ -1,4 +1,4 @@
-from database import UserFetchFormat,connect_to_localDB
+from database import UserFetchFormat,connect_to_localDB,connect_to_rds
 from typing import Union
 
 def check_user(phone:str) -> Union[UserFetchFormat, str]:
@@ -18,7 +18,6 @@ def check_user(phone:str) -> Union[UserFetchFormat, str]:
             WHERE phone = ?
         """
     # Removing extra whitespace and newline characters within the query
-    query = " ".join(query.split())  
     cursor.execute(query, (phone,))
     row = cursor.fetchone()
     conn.close()
