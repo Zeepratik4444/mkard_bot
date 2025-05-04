@@ -17,7 +17,6 @@ def check_user(phone:str) -> Union[UserFetchFormat, str]:
             FROM users 
             WHERE phone = ?
         """
-    # Removing extra whitespace and newline characters within the query
     cursor.execute(query, (phone,))
     row = cursor.fetchone()
     conn.close()
