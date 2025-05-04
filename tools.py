@@ -1,4 +1,4 @@
-from database import UserFetchFormat,connect_to_localDB,connect_to_rds
+from .database import UserFetchFormat,connect_to_localDB,connect_to_rds
 from typing import Union
 
 def check_user(phone:str) -> Union[UserFetchFormat, str]:
